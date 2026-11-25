@@ -21,16 +21,15 @@
                 </tr>
             </thead>
             <tbody>
-                @forelse ($kategori as $item)
+                @forelse ($data_kategori as $item)
                 <tr>
-                    <th scope="row">{{($kategori->perPage() * ($kategori->currentPage()-1)) +
+                    <th scope="row">{{($data_kategori->perPage() * ($data_kategori->currentPage()-1)) +
                         $loop->iteration}}</th>
                     <td>Nama Kategori</td>
                     <td>Deskripsi Kategori</td>
                     <td>
                         <button type="button" class="btn btn-warning">Edit</button>
                         <button type="button" class="btn btn-danger">Hapus</button>
-                        <button type="button" class="btn btn-info">Detail</button>
                     </td>
                 </tr>
                 @empty
@@ -41,10 +40,10 @@
             </tbody>
         </table>
         <div>
-            {{ $kategori->links('pagination::bootstrap-5') }}
-            Halaman : {{ $kategori->currentPage() }} <br />
-            Jumlah Data : {{ $kategori->total() }} <br />
-            Data Per Halaman : {{ $kategori->perPage() }} <br />
+            {{ $data_kategori->links('pagination::bootstrap-5') }}
+            Halaman : {{ $data_kategori->currentPage() }} <br />
+            Jumlah Data : {{ $data_kategori->total() }} <br />
+            Data Per Halaman : {{ $data_kategori->perPage() }} <br />
         </div>
     </div>
 </div>

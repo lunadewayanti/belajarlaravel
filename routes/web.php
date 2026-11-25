@@ -39,4 +39,3 @@ Route::delete('/product/{id}', [ProductController::class, 'destroy']);
 
 // membuat routing menggunakan resource controller untuk kategori produk (dibuat pada B.3)
 Route::resource('/category', CategoryController::class);
-

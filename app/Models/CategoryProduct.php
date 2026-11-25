@@ -15,4 +15,3 @@ class CategoryProduct extends Model
     // inisialisasi kolom yang TIDAK dapat diisi secara massal
     protected $guarded = ['id_category'];
 }
-
